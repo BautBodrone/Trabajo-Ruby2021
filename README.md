@@ -110,6 +110,8 @@ puede requerir algún trabajo adicional de tu parte.
 * `bin/`: directorio donde reside cualquier archivo ejecutable, siendo el más notorio `polycon`
   que se utiliza como punto de entrada para el uso de la herramienta.
   
-#Comentarios
-  *El codigo esta escrito en ingles el codigo ya que los argumentos estan todos en ingles
-  *La entrada de la fecha no me gusta como esta ahora ya que no funciona correctamente. No encontre forma de obligar al usuario a escribir hora. C  uando se agregue una UI se va a poder arreglar ese error
+## Comentarios
+  * El codigo esta escrito en ingles el codigo ya que los argumentos estan todos en ingles
+  * La entrada de la fecha no me gusta como esta ahora ya que no funciona correctamente. No encontre forma de obligar al usuario a escribir hora. Cuando se agregue una UI se va a poder arreglar ese error
+  * No hice ningun utils ya que para los que queria como por ejemplo el checkeo de directorio ya era una linea de codigo
+  * El edit es el mas flojo de todos ya que tuiliza un case para checkear si es la opcion correcta, intente de busca un 'in' como hay en python pero no encontre asi que termine optando por el case. Y el abrir el archivo para guardar no es lo mas optimo ya que abre y guarda dependiendo de la cantidad de opciones. Una solucion que se me ocurrio es guardandolo en formato json pero no se podia ya que el archivo pedia que sea .paf
