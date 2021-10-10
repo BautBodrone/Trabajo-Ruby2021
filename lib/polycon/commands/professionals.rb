@@ -14,10 +14,10 @@ module Polycon
 
         def call(name:, **)
           if Dir.exist?("#{Dir.home}/polycon/#{name}")
-            puts("Profesional '#{name}' already exists")
+            puts("Professional '#{name}' already exists")
           else
             FileUtils.mkdir_p("#{Dir.home}/polycon/#{name}") #si le saco el primer / lo crea en la carpeta del programa
-            puts("Profesional '#{name}' successfully created")
+            puts("Professional '#{name}' successfully created")
           end
         end
       end
@@ -36,12 +36,12 @@ module Polycon
           if Dir.exist?("#{Dir.home}/polycon/#{name}")
             if Dir["#{Dir.home}/polycon/#{name}/*.paf"].empty?
               FileUtils.remove_dir("#{Dir.home}/polycon/#{name}")
-              puts "Profesional '#{name}' successfully deleted"
+              puts "Professional '#{name}' successfully deleted"
             else
-              puts "Please delete all apointments before deleteing the professional"
+              puts "Please delete all appointments before deleting the professional"
             end
           else
-            puts("Profesional '#{name}' not found")
+            puts("Professional '#{name}' not found")
           end
         end
       end
@@ -75,9 +75,9 @@ module Polycon
         def call(old_name:, new_name:, **)
           if Dir.exist?("#{Dir.home}/polycon/#{old_name}")
             File.rename("#{Dir.home}/polycon/#{old_name}","#{Dir.home}/polycon/#{new_name}") # en windows si existe siempre muestra esto
-            puts("Profesional '#{old_name}' renamed to '#{new_name}'")
+            puts("Professional '#{old_name}' renamed to '#{new_name}'")
           else
-            puts("Profesional '#{old_name}' not found")
+            puts("Professional '#{old_name}' not found")
           end
         end
       end

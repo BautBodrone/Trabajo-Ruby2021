@@ -169,8 +169,25 @@ module Polycon
           '"2021-09-16 13:00" --professional="Alma Estevez" --notes="Some notes for the appointment" # Only changes the notes for the specified appointment. The rest of the information remains unchanged.',
         ]
 
-        def call(date:, professional:, **options)
-          warn "TODO: Implementar modificación de un turno de la o el profesional '#{professional}' con fecha '#{date}', para cambiarle la siguiente información: #{options}.\nPodés comenzar a hacerlo en #{__FILE__}:#{__LINE__}."
+        def call(date:, professional:, **options)#tengo que abrir modificar y guardar no encuentro otra forma
+          options.each do |key,value|
+            file_line = ""
+            file = File.readlines("#{Dir.home}/polycon/#{professional}/#{date}.paf")
+            case key.to_s
+            when "name","surname","phone","notes"
+              opt_value = true
+              file.each do |line|
+                if line.include?(key.to_s.capitalize)
+                  file_line += "#{key.to_s.capitalize}: #{value.to_s}\n"
+                else
+                  file_line += line
+                end
+              end
+              File.open("#{Dir.home}/polycon/#{professional}/#{date}.paf", 'w') do |file|
+                file.puts file_line
+              end
+            end
+          end
         end
       end
     end
