@@ -109,3 +109,7 @@ puede requerir algún trabajo adicional de tu parte.
   * `lib/polycon/version.rb` define la versión de la herramienta, utilizando [SemVer](https://semver.org/lang/es/).
 * `bin/`: directorio donde reside cualquier archivo ejecutable, siendo el más notorio `polycon`
   que se utiliza como punto de entrada para el uso de la herramienta.
+  
+#Comentarios
+  *El codigo esta escrito en ingles el codigo ya que los argumentos estan todos en ingles
+  *La entrada de la fecha no me gusta como esta ahora ya que no funciona correctamente. No encontre forma de obligar al usuario a escribir hora. C  uando se agregue una UI se va a poder arreglar ese error
