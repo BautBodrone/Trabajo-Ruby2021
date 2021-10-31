@@ -19,7 +19,7 @@ module Polycon
         def call(date:, professional:, name:, surname:, phone:, notes: nil)
           #date.filled(:date?)
           begin
-            Date.parse(date)
+            #DateTime.parse(date)
             if File.directory?("#{Dir.home}/polycon/#{professional}")
               if File.exist?("#{Dir.home}/polycon/#{professional}/#{date}.paf")
                 puts "An appointment with that date already exist"
@@ -33,7 +33,7 @@ module Polycon
               puts "Professional doesnt exist"
             end
           rescue
-            puts("Invalid date format recommended format: year-month-day_hour-minute")
+            puts("Invalid date format recommended format: 'year-month-day_hour-minute'")
           end
         end
       end
