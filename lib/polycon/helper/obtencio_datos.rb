@@ -1,8 +1,10 @@
 class Obtencion_datos
-  def obtencion_datos (file)
-    paciente = "#{file.readlines.map(&:chomp)[0].split(" ")[1]} #{file.readlines.map(&:chomp)[1].split(" ")[1]}"
-    telefono = "#{file.readlines.map(&:chomp)[2].split(" ")[1]}"
-    nota = "#{file.readlines.map(&:chomp)[3].split(" ")[1]}"
+  def self.obtencion_datos (file_param)
+    file = File.open(file_param)
+    data = (file.readlines.map(&:chomp))
+    paciente = "#{data[0].split(" ")[1]} #{data[1].split(" ")[1]}"
+    telefono = "#{data[2].split(" ")[1]}"
+    nota = "#{data[3].split(" ")[1]}"
     [paciente, telefono, nota]
   end
 end

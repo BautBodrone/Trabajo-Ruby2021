@@ -1,8 +1,8 @@
 require 'date'
 require 'erb'
 require 'rbconfig'
-require_relative 'obtencio_datos'
-require_relative 'os'
+require_relative '../helper/obtencio_datos'
+require_relative '../helper/os'
 
 module Polycon
   module Commands
@@ -11,7 +11,7 @@ module Polycon
         desc 'Create day grid'
         argument :date, required: true, desc: 'Full date for the Grid'
         def call(date:)
-          separator = os.name
+          separator = Os_helper.name
           hash_appoint = {"8:00": "","8:15":"","8:30":"","8:45":"","9:00": "","9:15":"","9:30":"","9:45":"","10:00": "","10:15":"",
                           "10:30":"","10:45":"","11:00": "","11:15":"","11:30":"","11:45":"","12:00": "","12:15":"","12:30":"",
                           "12:45":"", "13:00": "","13:15":"","13:30":"","13:45":"","14:00": "","14:15":"","14:30":"","14:45":"",
@@ -23,13 +23,16 @@ module Polycon
               fecha_file = aux[0]
               if date == fecha_file
                 hora = aux[1].gsub("-",":")
-                paciente, telefono, nota = obtencion_datos(File.open(file))
+                paciente, telefono, nota = Obtencion_datos.obtencion_datos(file)
                 hash_datos = "Profesional: #{prof} \nPaciente: #{paciente} \nTelefono: #{telefono}\nNota: #{nota}"
                 hash_appoint[hora] = hash_datos
               end
             end
           end
-          template = File.read('./templates/dia.html')
+          path = File.absolute_path('./templates/dia.html')
+          puts(path)
+          template = File.open(path)
+          template = File.read(template)
           erb = ERB.new(template).result_with_hash(hash:hash_appoint)
           output = erb
           File.open("#{Dir.home}/#{date}.pdf","w+") do
