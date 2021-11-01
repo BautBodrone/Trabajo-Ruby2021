@@ -3,6 +3,7 @@ module Polycon
     autoload :Professionals, 'polycon/commands/professionals'
     autoload :Appointments, 'polycon/commands/appointments'
     autoload :Version, 'polycon/commands/version'
+    autoload :Grid, 'polycon/commands/grid'
 
     extend Dry::CLI::Registry
 
@@ -21,6 +22,10 @@ module Polycon
       prefix.register 'show', Appointments::Show
       prefix.register 'cancel', Appointments::Cancel
       prefix.register 'cancel-all', Appointments::CancelAll
+    end
+
+    register 'grid', aliases: ['g'] do |prefix|
+      prefix.register 'dia', Grid::Dia
     end
 
     register 'version', Version, aliases: ['v', '-v', '--version']

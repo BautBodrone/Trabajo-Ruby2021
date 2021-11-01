@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <table border="1">
+    <table>
         <thead>
         <tr>
             <th>Hora</th>
@@ -17,10 +17,10 @@
         </tr>
         </thead>
         <tbody>
-            <% Hash.keys.each do |keys| %>
+            <% hash.keys.each do |keys| %>
                 <tr>
                     <th><% keys %></th>
-                    <% Hash[keys].each do |datos| %>
+                    <% hash[keys].each do |datos| %>
                         <td>
                             <% datos %>
                         </td>
