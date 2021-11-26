@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_26_154706) do
+ActiveRecord::Schema.define(version: 2021_11_26_184209) do
 
   create_table "appointments", force: :cascade do |t|
     t.string "name"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_11_26_154706) do
     t.integer "professional_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index "\"professional\", \"date\"", name: "index_appointments_on_professional_and_date", unique: true
+    t.index "\"date\", \"professional\"", name: "index_appointments_on_date_and_professional", unique: true
     t.index ["professional_id"], name: "index_appointments_on_professional_id"
   end
 

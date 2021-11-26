@@ -970,3 +970,313 @@ Processing by ProfessionalsController#index as HTML
 Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.2ms | Allocations: 4929)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProfessionals (20211126132736)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "professionals" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_professionals_on_name" ON "professionals" ("name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211126132736"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUsers (20211126154706)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211126154706"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAppointments (20211126184209)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "phone" integer, "date" datetime, "notes" text, "professional_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e6009ecf68"
+FOREIGN KEY ("professional_id")
+  REFERENCES "professionals" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_appointments_on_professional_id" ON "appointments" ("professional_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_appointments_on_date_and_professional" ON "appointments" ("date", "professional")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20211126184209"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-11-26 18:45:26.738593"], ["updated_at", "2021-11-26 18:45:26.738593"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-11-26 15:45:36 -0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.6ms | Allocations: 493)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3807)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-11-26 15:45:43 -0300
+Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1606)
+
+
+  
+ArgumentError (Unknown key: :presence. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/appointment.rb:12:in `<class:Appointment>'
+app/models/appointment.rb:1:in `<main>'
+app/controllers/appointments_controller.rb:6:in `index'
+Started GET "/appointments" for 127.0.0.1 at 2021-11-26 15:46:18 -0300
+Processing by AppointmentsController#index as HTML
+Completed 500 Internal Server Error in 4ms (Allocations: 1684)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/appointment.rb:15:in `<class:Appointment>'
+app/models/appointment.rb:1:in `<main>'
+app/controllers/appointments_controller.rb:6:in `index'
+Started GET "/appointments" for 127.0.0.1 at 2021-11-26 15:46:37 -0300
+Processing by AppointmentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/appointments/index.html.erb:19
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:19
+  Rendered appointments/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 97.1ms | Allocations: 23853)
+Completed 200 OK in 105ms (Views: 99.8ms | ActiveRecord: 0.4ms | Allocations: 27465)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2021-11-26 15:46:42 -0300
+Processing by AppointmentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 28.9ms | Allocations: 7129)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 30.3ms | Allocations: 7518)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 11203)
+Completed 200 OK in 85ms (Views: 78.8ms | ActiveRecord: 0.6ms | Allocations: 16673)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2021-11-26 15:47:04 -0300
+Processing by AppointmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "appointment"=>{"name"=>"qew", "surname"=>"wqe", "phone"=>"123", "date(1i)"=>"2021", "date(2i)"=>"11", "date(3i)"=>"26", "date(4i)"=>"18", "date(5i)"=>"46", "notes"=>"qew", "professional_id"=>"qew"}, "commit"=>"Create Appointment"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 3.0ms | Allocations: 4723)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 4844)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 8459)
+Completed 422 Unprocessable Entity in 84ms (Views: 42.3ms | ActiveRecord: 0.6ms | Allocations: 21291)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2021-11-26 15:47:07 -0300
+Processing by AppointmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "appointment"=>{"name"=>"qew", "surname"=>"wqe", "phone"=>"123231", "date(1i)"=>"2021", "date(2i)"=>"11", "date(3i)"=>"26", "date(4i)"=>"18", "date(5i)"=>"46", "notes"=>"qew", "professional_id"=>"qew"}, "commit"=>"Create Appointment"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 2.0ms | Allocations: 3515)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3628)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 7105)
+Completed 422 Unprocessable Entity in 56ms (Views: 43.9ms | ActiveRecord: 0.2ms | Allocations: 10867)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-11-26 15:47:22 -0300
+Processing by AppointmentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:19
+  Rendered appointments/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 728)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 4273)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.1ms | Allocations: 4765)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2021-11-26 15:47:24 -0300
+Processing by AppointmentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 1.9ms | Allocations: 3161)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 6807)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 7299)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-11-26 15:48:14 -0300
+Processing by ProfessionalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered professionals/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1177)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 4907)
+Completed 200 OK in 51ms (Views: 48.9ms | ActiveRecord: 0.2ms | Allocations: 6210)
+
+
+Started GET "/professionals/new" for 127.0.0.1 at 2021-11-26 15:48:16 -0300
+Processing by ProfessionalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/new.html.erb within layouts/application
+  Rendered professionals/_form.html.erb (Duration: 1.5ms | Allocations: 989)
+  Rendered professionals/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1337)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 4871)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.0ms | Allocations: 7094)
+
+
+Started POST "/professionals" for 127.0.0.1 at 2021-11-26 15:48:23 -0300
+Processing by ProfessionalsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "professional"=>{"name"=>"Test"}, "commit"=>"Create Professional"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/professionals_controller.rb:29:in `block in create'
+  [1m[36mProfessional Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "professionals" WHERE "professionals"."name" = ? LIMIT ?[0m  [["name", "Test"], ["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:29:in `block in create'
+  [1m[36mProfessional Create (0.5ms)[0m  [1m[32mINSERT INTO "professionals" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Test"], ["created_at", "2021-11-26 18:48:23.595529"], ["updated_at", "2021-11-26 18:48:23.595529"]]
+  ↳ app/controllers/professionals_controller.rb:29:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/professionals_controller.rb:29:in `block in create'
+Redirected to http://127.0.0.1:3000/professionals/1
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms | Allocations: 4327)
+
+
+Started GET "/professionals/1" for 127.0.0.1 at 2021-11-26 15:48:23 -0300
+Processing by ProfessionalsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/professionals_controller.rb:64:in `set_professional'
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/show.html.erb within layouts/application
+  Rendered professionals/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 3779)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.2ms | Allocations: 5091)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-11-26 15:48:25 -0300
+Processing by ProfessionalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:14
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 839)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 4392)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.2ms | Allocations: 4879)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2021-11-26 15:48:27 -0300
+Processing by AppointmentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 1.9ms | Allocations: 3172)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 3285)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 6826)
+Completed 200 OK in 40ms (Views: 39.8ms | ActiveRecord: 0.0ms | Allocations: 7316)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-11-26 15:48:29 -0300
+Processing by AppointmentsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:19
+  Rendered appointments/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 713)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 4257)
+Completed 200 OK in 37ms (Views: 36.8ms | ActiveRecord: 0.1ms | Allocations: 4743)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2021-11-26 15:48:30 -0300
+Processing by AppointmentsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 2.1ms | Allocations: 3157)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 3270)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 6803)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 7294)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2021-11-26 15:48:49 -0300
+Processing by AppointmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "appointment"=>{"name"=>"Appointmen", "surname"=>"Test", "phone"=>"", "date(1i)"=>"2021", "date(2i)"=>"11", "date(3i)"=>"26", "date(4i)"=>"18", "date(5i)"=>"48", "notes"=>"", "professional_id"=>""}, "commit"=>"Create Appointment"}
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 4.5ms | Allocations: 7108)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 7221)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 10688)
+Completed 422 Unprocessable Entity in 54ms (Views: 52.1ms | ActiveRecord: 0.0ms | Allocations: 12968)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2021-11-26 15:49:02 -0300
+Processing by AppointmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "appointment"=>{"name"=>"Appointmen", "surname"=>"Test", "phone"=>"123456", "date(1i)"=>"2021", "date(2i)"=>"11", "date(3i)"=>"26", "date(4i)"=>"18", "date(5i)"=>"48", "notes"=>"", "professional_id"=>"Test"}, "commit"=>"Create Appointment"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 2.2ms | Allocations: 3502)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 3615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 7082)
+Completed 422 Unprocessable Entity in 55ms (Views: 49.7ms | ActiveRecord: 0.2ms | Allocations: 10756)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2021-11-26 15:49:06 -0300
+Processing by AppointmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "appointment"=>{"name"=>"Appointmen", "surname"=>"Test", "phone"=>"123456", "date(1i)"=>"2021", "date(2i)"=>"11", "date(3i)"=>"26", "date(4i)"=>"18", "date(5i)"=>"48", "notes"=>"", "professional_id"=>"Test"}, "commit"=>"Create Appointment"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 2.3ms | Allocations: 3503)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 3616)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 7092)
+Completed 422 Unprocessable Entity in 54ms (Views: 48.5ms | ActiveRecord: 0.2ms | Allocations: 10748)
+
+
+Started POST "/appointments" for 127.0.0.1 at 2021-11-26 15:49:07 -0300
+Processing by AppointmentsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "appointment"=>{"name"=>"Appointmen", "surname"=>"Test", "phone"=>"123456", "date(1i)"=>"2021", "date(2i)"=>"11", "date(3i)"=>"26", "date(4i)"=>"18", "date(5i)"=>"48", "notes"=>"", "professional_id"=>"Test"}, "commit"=>"Create Appointment"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mProfessional Load (0.1ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/appointments_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (Duration: 2.4ms | Allocations: 3502)
+  Rendered appointments/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3615)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 7091)
+Completed 422 Unprocessable Entity in 56ms (Views: 50.8ms | ActiveRecord: 0.2ms | Allocations: 10740)
+
+

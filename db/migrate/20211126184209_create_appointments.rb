@@ -7,9 +7,9 @@ class CreateAppointments < ActiveRecord::Migration[6.1]
       t.datetime :date
       t.text :notes
       t.belongs_to :professional, null: false, foreign_key: true
+      t.index [:date, :professional], unique:true
 
       t.timestamps
     end
-    add_index :appointments, [:professional, :date], unique: true
   end
 end

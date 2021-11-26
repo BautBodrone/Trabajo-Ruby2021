@@ -11,8 +11,7 @@ class Appointment < ApplicationRecord
   }
   validates :phone, presence: true, length: { in: 6..6 }, numericality: true
   validates :phone,
-            numericality: { only_integer: true }
+           numericality: { only_integer: true }
   validates :date, presence: true
-  validates :date,uniqueness: {scope: :professional}
   belongs_to :professional
 end
