@@ -13,6 +13,8 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    # @professional = Professional.new
+    # @professional = Professional.pluck(:name, :id)
   end
 
   # GET /appointments/1/edit
@@ -21,6 +23,9 @@ class AppointmentsController < ApplicationController
 
   # POST /appointments or /appointments.json
   def create
+    puts("-----------------------------------")
+    puts(appointment_params)
+    puts("-----------------------------------")
     @appointment = Appointment.new(appointment_params)
 
     respond_to do |format|
