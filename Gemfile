@@ -45,4 +45,12 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Gem to create forms
-gem 'simple_form'
+gem 'simple_form' , '~> 5.1.0'
+
+# Gem to helmp with html disgn
+gem 'bootstrap', '~> 5.1.3'
+
+# Gem that works whith bootstrap
+gem 'jquery-rails', '~>4.4.0'
+
+

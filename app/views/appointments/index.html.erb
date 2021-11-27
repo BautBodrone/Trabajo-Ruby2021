@@ -2,18 +2,19 @@
 
 <h1>Appointments</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Surname</th>
-      <th>Phone</th>
-      <th>Date</th>
-      <th>Notes</th>
-      <th>Professional</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Date</th>
+      <th scope="col">Notes</th>
+      <th scope="col">Professional</th>
       <th colspan="3"></th>
     </tr>
   </thead>
+
 
   <tbody>
     <% @appointments.each do |appointment| %>

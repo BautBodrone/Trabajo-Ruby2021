@@ -2,10 +2,10 @@
 
 <h1>Professionals</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
+      <th scope="col">Name</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,10 @@
     <% @professionals.each do |professional| %>
       <tr>
         <td><%= professional.name %></td>
-        <td><%= link_to 'Show', professional %></td>
-        <td><%= link_to 'Edit', edit_professional_path(professional) %></td>
-        <td><%= link_to 'Destroy', professional, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', professional, class:"btn btn-info" %></td>
+        <td><%= link_to 'Editar', edit_professional_path(professional),class:"btn btn-warning" %></td>
+        <td><%= link_to 'Eliminar', professional, method: :delete,class:"btn btn-danger",
+                        data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Professional', new_professional_path %>
+<%= link_to 'Nuevo Profesional', new_professional_path, class:"btn btn-success" %>
