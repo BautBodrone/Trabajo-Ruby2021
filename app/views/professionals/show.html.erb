@@ -1,4 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <p id="notice"><%= notice %></p>
+    <h1 class="display-4">Appointments for:
+    <%= @professional.name %>
+    </h1>
+  <hr class="my-4">
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Date</th>
+      <th scope="col">Notes</th>
+    </tr>
+    </thead>
 
-<%= link_to 'Edit', edit_professional_path(@professional) %> |
-<%= link_to 'Back', professionals_path %>
+
+    <tbody>
+    <% @professional.appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.name %></td>
+        <td><%= appointment.surname %></td>
+        <td><%= appointment.phone %></td>
+        <td><%= appointment.date %></td>
+        <td><%= appointment.notes %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Back', professionals_path, class:"btn btn-dark" %>
+</div>
