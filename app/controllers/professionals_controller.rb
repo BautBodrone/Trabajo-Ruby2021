@@ -69,4 +69,6 @@ class ProfessionalsController < ApplicationController
       params.require(:professional).permit(:name)
       #params.fetch(:professional, {})
     end
+
+  before_action :authenticate_user!
 end

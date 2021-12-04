@@ -71,4 +71,6 @@ class AppointmentsController < ApplicationController
     def appointment_params
       params.require(:appointment).permit(:name, :surname, :phone, :date, :notes, :professional_id)
     end
+
+  before_action :authenticate_user!
 end
