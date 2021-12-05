@@ -11,12 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <br>
+  <div class="field form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:'form-control' %>
   </div>
 
+  <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class:'btn btn-secondary' %>
+    <%= link_to 'Back', professionals_path, class:"btn btn-dark" %>
   </div>
 <% end %>

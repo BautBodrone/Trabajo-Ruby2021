@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: %i[ show edit update destroy ]
+  load_and_authorize_resource
 
   # GET /appointments or /appointments.json
   def index
@@ -23,9 +24,6 @@ class AppointmentsController < ApplicationController
 
   # POST /appointments or /appointments.json
   def create
-    puts("-----------------------------------")
-    puts(appointment_params)
-    puts("-----------------------------------")
     @appointment = Appointment.new(appointment_params)
 
     respond_to do |format|

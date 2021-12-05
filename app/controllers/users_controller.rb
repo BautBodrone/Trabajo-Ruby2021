@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
+  load_and_authorize_resource
 
   # GET /users or /users.json
   def index
@@ -22,7 +24,6 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   def create
     @user = User.new(user_params)
-
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: "User was successfully created." }
@@ -64,9 +65,7 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:username, :password)
+      params.require(:user).permit(:email, :password, :role)
     end
-
-  before_action :authenticate_user!
 
 end

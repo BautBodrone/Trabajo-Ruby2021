@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <h1>Professionals</h1>
 
-<table class="table">
+<table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">Name</th>
@@ -13,18 +13,24 @@
     <% @professionals.each do |professional| %>
       <tr>
         <td><%= professional.name %></td>
-        <td><%= link_to 'Mostrar', professional, class:"btn btn-info" %></td>
-        <td><%= link_to 'Editar', edit_professional_path(professional),class:"btn btn-warning" %></td>
-        <td><%= link_to 'Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if can? :destroy, @professionals %>
+          <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
                         data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
-      </tr>
+        <% end %>
+        </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'Nuevo Profesional', new_professional_path, class:"btn btn-success" %>
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
 
 <script>
 

@@ -26,23 +26,28 @@
     <%= form.number_field :phone, class:'form-control' %>
   </div>
 
+  <br>
   <div class="field form-group">
     <%= form.label :date %>
     <%= form.datetime_select :date, class:'form-control' %>
   </div>
 
+  <br>
   <div class="field form-group">
     <%= form.label :notes %>
     <%= form.text_area :notes, class:'form-control' %>
   </div>
 
+  <br>
   <div class="field form-group">
     <%= form.label :professional %>
     <%= form.collection_select :professional_id, Professional.order(:name),:id,:name, include_blank: true,
                                class:'form-control' %>
   </div>
 
+  <br>
   <div class="actions">
     <%= form.submit class:'btn btn-secondary' %>
+    <%= link_to 'Back', appointments_path, class:"btn btn-dark"%>
   </div>
 <% end %>
