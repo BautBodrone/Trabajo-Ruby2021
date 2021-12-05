@@ -1,32 +1,63 @@
-<div class="jumbotron">
-  <p id="notice"><%= notice %></p>
-    <h1 class="display-4">Appointments for:
-    <%= @professional.name %>
-    </h1>
+
+<h1 class="display-4">Appointments for:
+<%= @professional.name %>
+</h1>
+<hr class="my-4">
+<div class="container-bordered">
+  <div class="row">
+    <div class="col">
+      Date
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="row">
+          <div class="col">
+            Name
+          </div>
+          <div class="col">
+            Surname
+          </div>
+          <div class="col">
+              Time
+          </div>
+          <div class="col">
+            Show
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <hr class="my-4">
-  <table class="table table-bordered">
-    <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Surname</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Date</th>
-      <th scope="col">Notes</th>
-    </tr>
-    </thead>
-
-
-    <tbody>
-    <% @professional.appointments.each do |appointment| %>
-      <tr>
-        <td><%= appointment.name %></td>
-        <td><%= appointment.surname %></td>
-        <td><%= appointment.phone %></td>
-        <td><%= appointment.date %></td>
-        <td><%= appointment.notes %></td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-  <%= link_to 'Back', professionals_path, class:"btn btn-dark" %>
+  <% for i in 0..6 do %>
+    <div class="row">
+      <div class="col">
+        <%= Date.today + i.days %>
+      </div>
+      <div class="col">
+        <% @professional.appointments.each do |appointment| %>
+          <% if (Date.today + i.days) == appointment.date.to_date %>
+            <div class="row">
+              <div class="col">
+                <%=appointment.name%>
+              </div>
+              <div class="col">
+                <%=appointment.surname%>
+              </div>
+              <div class="col">
+                <%=appointment.date.strftime("%I:%M%p")%>
+              </div>
+              <div class="col">
+                <% if can? :read, @appointments %>
+                  <td><%= link_to 'Show', appointment, class:"btn bi-eye-fill" %></td>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <hr class="my-4">
+  <% end %>
 </div>
+  <%#= link_to 'Month', professional_month_path(professional),class:"btn bi-pencil-fill" %>
+  <%= link_to 'Back', professionals_path, class:"btn btn-dark" %>

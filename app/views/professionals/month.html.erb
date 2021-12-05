@@ -1,0 +1,53 @@
+<h1 class="display-4">Appointments for:
+  <%= @professional.name %>
+</h1>
+<hr class="my-4">
+<div class="container-bordered">
+  <div class="row">
+    <div class="col">
+      Date
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="row">
+          <div class="col">
+            Name
+          </div>
+          <div class="col">
+            Surname
+          </div>
+          <div class="col">
+            Time
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="my-4">
+  <% for i in 0..6 do %>
+    <div class="row">
+      <div class="col">
+        <%= Date.today + i.days %>
+      </div>
+      <div class="col">
+        <% @professional.appointments.each do |appointment| %>
+          <% if (Date.today + i.days) == appointment.date.to_date %>
+            <div class="row">
+              <div class="col">
+                <%=appointment.name%>
+              </div>
+              <div class="col">
+                <%=appointment.surname%>
+              </div>
+              <div class="col">
+                <%=appointment.date.strftime("%I:%M%p")%>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <hr class="my-4">
+  <% end %>
+</div>
+<%= link_to 'Back', professionals_path, class:"btn btn-dark" %>

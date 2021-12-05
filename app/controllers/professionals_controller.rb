@@ -16,6 +16,10 @@ class ProfessionalsController < ApplicationController
     @professional = Professional.new
   end
 
+  # GET /professionals/month
+  def month
+  end
+
   # GET /professionals/1/edit
   def edit
   end
