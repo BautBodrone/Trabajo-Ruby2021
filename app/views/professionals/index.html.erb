@@ -19,9 +19,13 @@
         <% if can? :edit, @professionals %>
           <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
         <% end %>
-        <% if can? :destroy, @professionals %>
-          <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
-                        data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+        <% if professional.appointments.length > 0 %>
+          <td></td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
         <% end %>
         </tr>
     <% end %>

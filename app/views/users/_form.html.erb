@@ -20,12 +20,15 @@
     <%= form.text_field :password, class:"form-control" %>
   </div>
 
-  <br>
 
-  <div class="field form-group">
-    <%= form.label :role %>
-    <%= form.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}, class:"form-select") %>
-  </div>
+
+  <% if user.id != 1 %>
+    <br>
+    <div class="field form-group">
+      <%= form.label :role %>
+      <%= form.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}, class:"form-select") %>
+    </div>
+  <% end %>
 
   <br>
   <div class="actions">

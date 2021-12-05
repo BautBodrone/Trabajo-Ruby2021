@@ -23438,3 +23438,1791 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 51ms (Views: 45.4ms | ActiveRecord: 0.4ms | Allocations: 5243)
 
 
+Started GET "/users" for 127.0.0.1 at 2021-12-05 16:47:57 -0300
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 4477)
+Completed 200 OK in 110ms (Views: 58.7ms | ActiveRecord: 1.5ms | Allocations: 8514)
+
+
+Started GET "/app/assets/images/logo.pnng.png" for 127.0.0.1 at 2021-12-05 16:47:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/logo.pnng.png"):
+  
+Started GET "/" for 127.0.0.1 at 2021-12-05 16:48:58 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/appointments
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 1.2ms | Allocations: 10499)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:48:58 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 11787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 68.3ms | Allocations: 15265)
+Completed 200 OK in 90ms (Views: 73.5ms | ActiveRecord: 2.5ms | Allocations: 22415)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:49:18 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 3382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 64.7ms | Allocations: 6529)
+Completed 200 OK in 76ms (Views: 69.6ms | ActiveRecord: 0.6ms | Allocations: 9861)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/logo.pnng.png"):
+  
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:49:19 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2800)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 5201)
+Completed 200 OK in 54ms (Views: 48.1ms | ActiveRecord: 0.7ms | Allocations: 7558)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:49:47 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 6530)
+Completed 200 OK in 75ms (Views: 67.1ms | ActiveRecord: 0.7ms | Allocations: 9555)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/logo.png"):
+  
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:49:56 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 3380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 6527)
+Completed 200 OK in 69ms (Views: 61.7ms | ActiveRecord: 0.7ms | Allocations: 9637)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:52:00 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3380)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 105.2ms | Allocations: 8850)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.7ms | Allocations: 12082)
+
+
+  
+ActionView::Template::Error (Webpacker can't find assets/images/logo.png in C:/Users/wat_o/Desktop/polycon-template-master/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "application.js": "/packs/js/application-e421b4aa3f716bebdab1.js",
+  "application.js.map": "/packs/js/application-e421b4aa3f716bebdab1.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-e421b4aa3f716bebdab1.js"
+      ],
+      "js.map": [
+        "/packs/js/application-e421b4aa3f716bebdab1.js.map"
+      ]
+    }
+  }
+}
+):
+    1: <!doctype html>
+    2: <html lang="en">
+    3: <head>
+    4:   <%= favicon_pack_tag "assets/images/logo.png"%>
+    5:   <!-- Required meta tags -->
+    6:   <meta charset="utf-8">
+    7:   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+app/views/layouts/application.html.erb:4
+Started GET "/" for 127.0.0.1 at 2021-12-05 16:53:53 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/appointments
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 29ms (ActiveRecord: 1.2ms | Allocations: 10492)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:53:53 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 11788)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 423)
+  Rendered layout layouts/application.html.erb (Duration: 302.8ms | Allocations: 25513)
+Completed 200 OK in 324ms (Views: 307.3ms | ActiveRecord: 2.5ms | Allocations: 32663)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:56:14 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 6147)
+Completed 200 OK in 69ms (Views: 62.8ms | ActiveRecord: 0.7ms | Allocations: 8527)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-12-05 16:56:45 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 51ms (ActiveRecord: 0.2ms | Allocations: 5982)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 16:56:45 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 693)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3384)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 164)
+  Rendered layouts/_alert.html.erb (Duration: 0.6ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 6887)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 9087)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2021-12-05 16:56:50 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 235)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 11447)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 135)
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 14469)
+Completed 200 OK in 86ms (Views: 83.2ms | ActiveRecord: 0.0ms | Allocations: 16041)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-05 16:57:24 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 454)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1721)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 378)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 5531)
+Completed 200 OK in 67ms (Views: 65.6ms | ActiveRecord: 0.0ms | Allocations: 7610)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-12-05 16:57:27 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/appointments
+Completed 302 Found in 354ms (ActiveRecord: 0.4ms | Allocations: 7493)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:57:27 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3384)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 158)
+  Rendered layouts/_alert.html.erb (Duration: 0.6ms | Allocations: 136)
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 6877)
+Completed 200 OK in 72ms (Views: 65.0ms | ActiveRecord: 0.7ms | Allocations: 9925)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 16:57:31 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1333)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 4480)
+Completed 200 OK in 56ms (Views: 49.6ms | ActiveRecord: 0.6ms | Allocations: 7627)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 16:57:31 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:13
+  Rendered professionals/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 5445)
+Completed 200 OK in 55ms (Views: 47.7ms | ActiveRecord: 0.5ms | Allocations: 8632)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2021-12-05 16:57:33 -0300
+Processing by AppointmentsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  ↳ app/views/appointments/index.html.erb:20
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  [1m[36mCACHE Professional Load (0.0ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals" WHERE "professionals"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/appointments/index.html.erb:27
+  Rendered appointments/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 2755)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 48.8ms | Allocations: 5661)
+Completed 200 OK in 56ms (Views: 49.4ms | ActiveRecord: 0.9ms | Allocations: 7866)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 16:57:33 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:13
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1634)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 4540)
+Completed 200 OK in 57ms (Views: 52.5ms | ActiveRecord: 0.5ms | Allocations: 6601)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 16:57:34 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 3784)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 0.5ms | Allocations: 5817)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 16:57:37 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:13
+  Rendered professionals/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1634)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 4540)
+Completed 200 OK in 57ms (Views: 52.3ms | ActiveRecord: 0.4ms | Allocations: 6589)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 16:57:37 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 3782)
+Completed 200 OK in 61ms (Views: 56.6ms | ActiveRecord: 0.4ms | Allocations: 5789)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 16:57:40 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.9ms | Allocations: 1906)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2244)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 5308)
+Completed 200 OK in 57ms (Views: 49.5ms | ActiveRecord: 0.6ms | Allocations: 7921)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 16:57:42 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 3802)
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 0.6ms | Allocations: 6054)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 16:59:28 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.1ms | Allocations: 1083)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1176)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 4079)
+Completed 200 OK in 51ms (Views: 45.3ms | ActiveRecord: 0.5ms | Allocations: 6387)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 16:59:48 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 5097)
+Completed 200 OK in 71ms (Views: 61.9ms | ActiveRecord: 0.5ms | Allocations: 8094)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 16:59:49 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.6ms | Allocations: 1611)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1929)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 4832)
+Completed 200 OK in 57ms (Views: 47.4ms | ActiveRecord: 0.5ms | Allocations: 7393)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 16:59:50 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.0ms | Allocations: 1057)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 4053)
+Completed 200 OK in 56ms (Views: 48.3ms | ActiveRecord: 0.6ms | Allocations: 6341)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 16:59:51 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.4ms | Allocations: 1057)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 53.4ms | Allocations: 4058)
+Completed 200 OK in 61ms (Views: 54.4ms | ActiveRecord: 0.5ms | Allocations: 6347)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 17:00:05 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.7ms | Allocations: 5504)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.7ms | Allocations: 5863)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 5935)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms | Allocations: 9159)
+
+
+  
+ActionView::Template::Error (undefined method `id' for User:Class
+Did you mean?  ids):
+    22: 
+    23:   <br>
+    24: 
+    25:   <% if User.id ==1 %>
+    26:     <div class="field form-group">
+    27:       <%= form.label :role %>
+    28:       <%= form.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}, class:"form-select") %>
+  
+app/views/users/_form.html.erb:25
+app/views/users/_form.html.erb:1
+app/views/users/edit.html.erb:7
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 17:00:29 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 3.0ms | Allocations: 1700)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 5841)
+Completed 200 OK in 59ms (Views: 51.3ms | ActiveRecord: 0.4ms | Allocations: 9328)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 17:00:31 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 4007)
+Completed 200 OK in 57ms (Views: 50.0ms | ActiveRecord: 0.6ms | Allocations: 6373)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2021-12-05 17:00:32 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.4ms | Allocations: 745)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 3741)
+Completed 200 OK in 57ms (Views: 50.6ms | ActiveRecord: 0.5ms | Allocations: 6045)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 17:00:37 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.7ms | Allocations: 1057)
+  Rendered users/edit.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 4053)
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 0.4ms | Allocations: 6346)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-12-05 17:00:50 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.7ms | Allocations: 1374)
+  Rendered users/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1723)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 5510)
+Completed 200 OK in 67ms (Views: 57.5ms | ActiveRecord: 0.6ms | Allocations: 8755)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 17:00:52 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 4020)
+Completed 200 OK in 66ms (Views: 59.8ms | ActiveRecord: 0.5ms | Allocations: 6385)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2021-12-05 17:00:54 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 2.2ms | Allocations: 1071)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 4068)
+Completed 200 OK in 55ms (Views: 48.6ms | ActiveRecord: 0.5ms | Allocations: 6372)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 17:01:36 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 5087)
+Completed 200 OK in 69ms (Views: 63.0ms | ActiveRecord: 0.5ms | Allocations: 8052)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-12-05 17:02:04 -0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:15
+  Rendered users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1298)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 5100)
+Completed 200 OK in 71ms (Views: 63.7ms | ActiveRecord: 0.7ms | Allocations: 8220)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:03:35 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:13
+  Rendered professionals/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2181)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 5323)
+Completed 200 OK in 55ms (Views: 48.7ms | ActiveRecord: 0.5ms | Allocations: 8238)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:05:08 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1427)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1500)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 4645)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if professional.appointments.size < 0 %>
+          <td></td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if professional.appointments.size < 0 %>
+23:              <td></td>
+24:            <% else %>
+25:              <% if can? :destroy, @professionals %>
+26:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+27:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+28:              <% end %>
+29:            </tr>
+30:        <% end %>
+31:      </tbody>
+32:    </table>
+33:    
+34:    <br>
+35:    
+36:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+37:    
+38:    <script>
+39:    
+40:    </script>
+  
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:07:11 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1414)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1487)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 4697)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if professional.appointments.length < 0 %>
+          <td></td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if professional.appointments.length < 0 %>
+23:              <td></td>
+24:            <% else %>
+25:              <% if can? :destroy, @professionals %>
+26:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+27:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+28:              <% end %>
+29:            </tr>
+30:        <% end %>
+31:      </tbody>
+32:    </table>
+33:    
+34:    <br>
+35:    
+36:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+37:    
+38:    <script>
+39:    
+40:    </script>
+  
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:07:27 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1414)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1487)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 4697)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if professional.appointments.length() < 0 %>
+          <td></td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if professional.appointments.length() < 0 %>
+23:              <td></td>
+24:            <% else %>
+25:              <% if can? :destroy, @professionals %>
+26:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+27:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+28:              <% end %>
+29:            </tr>
+30:        <% end %>
+31:      </tbody>
+32:    </table>
+33:    
+34:    <br>
+35:    
+36:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+37:    
+38:    <script>
+39:    
+40:    </script>
+  
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:07:38 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1414)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1487)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 4700)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if professional.appointments.length() > 0 %>
+          <td></td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if professional.appointments.length() > 0 %>
+23:              <td></td>
+24:            <% else %>
+25:              <% if can? :destroy, @professionals %>
+26:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+27:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+28:              <% end %>
+29:            </tr>
+30:        <% end %>
+31:      </tbody>
+32:    </table>
+33:    
+34:    <br>
+35:    
+36:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+37:    
+38:    <script>
+39:    
+40:    </script>
+  
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:07:50 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1414)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1487)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms | Allocations: 4697)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if professional.appointments > 0 %>
+          <td></td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if professional.appointments > 0 %>
+23:              <td></td>
+24:            <% else %>
+25:              <% if can? :destroy, @professionals %>
+26:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+27:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+28:              <% end %>
+29:            </tr>
+30:        <% end %>
+31:      </tbody>
+32:    </table>
+33:    
+34:    <br>
+35:    
+36:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+37:    
+38:    <script>
+39:    
+40:    </script>
+  
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:43: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:08:20 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1429)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1502)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 4712)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if 1 > 0 %>
+          <td>
+            <p> <%= professional.appointments %></p>
+          </td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if 1 > 0 %>
+23:              <td>
+24:                <p> <%= professional.appointments %></p>
+25:              </td>
+26:            <% else %>
+27:              <% if can? :destroy, @professionals %>
+28:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+29:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+30:              <% end %>
+31:            </tr>
+32:        <% end %>
+33:      </tbody>
+34:    </table>
+35:    
+36:    <br>
+37:    
+38:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+39:    
+40:    <script>
+41:    
+42:    </script>
+  
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:08:26 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1429)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1502)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 4712)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if 1 > 0 %>
+          <td>
+            <p> <%= professional.appointment %></p>
+          </td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if 1 > 0 %>
+23:              <td>
+24:                <p> <%= professional.appointment %></p>
+25:              </td>
+26:            <% else %>
+27:              <% if can? :destroy, @professionals %>
+28:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+29:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+30:              <% end %>
+31:            </tr>
+32:        <% end %>
+33:      </tbody>
+34:    </table>
+35:    
+36:    <br>
+37:    
+38:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+39:    
+40:    <script>
+41:    
+42:    </script>
+  
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:08:32 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1433)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1506)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 4716)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if 1 > 0 %>
+          <td>
+            <p> <%= professional.appointments %></p>
+          </td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if 1 > 0 %>
+23:              <td>
+24:                <p> <%= professional.appointments %></p>
+25:              </td>
+26:            <% else %>
+27:              <% if can? :destroy, @professionals %>
+28:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+29:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+30:              <% end %>
+31:            </tr>
+32:        <% end %>
+33:      </tbody>
+34:    </table>
+35:    
+36:    <br>
+37:    
+38:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+39:    
+40:    <script>
+41:    
+42:    </script>
+  
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:11:02 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1429)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1502)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 4712)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if 1 > 0 %>
+          <td>
+            <p> <%= professional.name %></p>
+          </td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if 1 > 0 %>
+23:              <td>
+24:                <p> <%= professional.name %></p>
+25:              </td>
+26:            <% else %>
+27:              <% if can? :destroy, @professionals %>
+28:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+29:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+30:              <% end %>
+31:            </tr>
+32:        <% end %>
+33:      </tbody>
+34:    </table>
+35:    
+36:    <br>
+37:    
+38:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+39:    
+40:    <script>
+41:    
+42:    </script>
+  
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:11:38 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  Rendered professionals/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1422)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1495)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 4705)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p id="notice"><%= notice %></p>
+<h1>Professionals</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professionals.each do |professional| %>
+      <tr>
+        <td><%= professional.name %></td>
+        <% if can? :read, @professionals %>
+          <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @professionals %>
+          <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if 1 > 0 %>
+          <td>
+            <p> <%= professional.name %></p>
+          </td>
+        <% else %>
+          <% if can? :destroy, @professionals %>
+            <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+          <% end %>
+        <% end %>
+      </tr>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+
+<script>
+
+</script>
+
+):
+1:    <p id="notice"><%= notice %></p>
+2:    <h1>Professionals</h1>
+3:    
+4:    <table class="table table-striped">
+5:      <thead>
+6:        <tr>
+7:          <th scope="col">Name</th>
+8:          <th colspan="3"></th>
+9:        </tr>
+10:      </thead>
+11:    
+12:      <tbody>
+13:        <% @professionals.each do |professional| %>
+14:          <tr>
+15:            <td><%= professional.name %></td>
+16:            <% if can? :read, @professionals %>
+17:              <td><%= link_to ' Mostrar', professional, class:"btn bi-eye-fill" %></td>
+18:            <% end %>
+19:            <% if can? :edit, @professionals %>
+20:              <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+21:            <% end %>
+22:            <% if 1 > 0 %>
+23:              <td>
+24:                <p> <%= professional.name %></p>
+25:              </td>
+26:            <% else %>
+27:              <% if can? :destroy, @professionals %>
+28:                <td><%= link_to ' Eliminar', professional, method: :delete,class:"btn bi-trash-fill",
+29:                              data: { confirm: 'Esta seguro? Se eliminaran todas las citas' } %></td>
+30:              <% end %>
+31:            <% end %>
+32:          </tr>
+33:      </tbody>
+34:    </table>
+35:    
+36:    <br>
+37:    
+38:    <%= link_to 'New Professional', new_professional_path, class:"btn btn-success" %>
+39:    
+40:    <script>
+41:    
+42:    </script>
+  
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+app/views/professionals/index.html.erb:45: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:12:47 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:13
+  [1m[36mAppointment Load (0.6ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ? /* loading for inspect */ LIMIT ?[0m  [["professional_id", 1], ["LIMIT", 11]]
+  Rendered professionals/index.html.erb within layouts/application (Duration: 60.4ms | Allocations: 12371)
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 12452)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 1.0ms | Allocations: 15661)
+
+
+  
+ActionView::Template::Error (undefined method `lenght' for #<ActiveRecord::Associations::CollectionProxy [#<Appointment id: 1, name: "Appointmen", surname: "Test", phone: 123123, date: "2021-12-05 15:04:00.000000000 +0000", notes: "132", professional_id: 1, created_at: "2021-12-05 15:04:13.650421000 +0000", updated_at: "2021-12-05 15:04:13.650421000 +0000">, #<Appointment id: 2, name: "Appointmen", surname: "Test", phone: 123123, date: "2021-12-05 19:07:00.000000000 +0000", notes: "123123123123", professional_id: 1, created_at: "2021-12-05 19:07:11.225977000 +0000", updated_at: "2021-12-05 19:07:11.225977000 +0000">]>
+Did you mean?  length):
+    19:         <% if can? :edit, @professionals %>
+    20:           <td><%= link_to ' Editar', edit_professional_path(professional),class:"btn bi-pencil-fill" %></td>
+    21:         <% end %>
+    22:         <% if professional.appointments.lenght < 0 %>
+    23:           <td></td>
+    24:         <% else %>
+    25:           <% if can? :destroy, @professionals %>
+  
+app/views/professionals/index.html.erb:22
+app/views/professionals/index.html.erb:13
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:13:00 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.2ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:13
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 1]]
+  ↳ app/views/professionals/index.html.erb:22
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 2]]
+  ↳ app/views/professionals/index.html.erb:22
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 3]]
+  ↳ app/views/professionals/index.html.erb:22
+  Rendered professionals/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 4829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 8636)
+Completed 200 OK in 70ms (Views: 62.7ms | ActiveRecord: 1.1ms | Allocations: 11874)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:13:09 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:13
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 1]]
+  ↳ app/views/professionals/index.html.erb:22
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 2]]
+  ↳ app/views/professionals/index.html.erb:22
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 3]]
+  ↳ app/views/professionals/index.html.erb:22
+  Rendered professionals/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 4480)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 401)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 8280)
+Completed 200 OK in 69ms (Views: 61.6ms | ActiveRecord: 1.2ms | Allocations: 11396)
+
+
+Started GET "/professionals" for 127.0.0.1 at 2021-12-05 17:16:18 -0300
+Processing by ProfessionalsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering professionals/index.html.erb within layouts/application
+  [1m[36mProfessional Load (0.3ms)[0m  [1m[34mSELECT "professionals".* FROM "professionals"[0m
+  ↳ app/views/professionals/index.html.erb:13
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 1]]
+  ↳ app/views/professionals/index.html.erb:22
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 2]]
+  ↳ app/views/professionals/index.html.erb:22
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."professional_id" = ?[0m  [["professional_id", 3]]
+  ↳ app/views/professionals/index.html.erb:22
+  Rendered professionals/index.html.erb within layouts/application (Duration: 24.2ms | Allocations: 12759)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 63.6ms | Allocations: 15816)
+Completed 200 OK in 85ms (Views: 62.3ms | ActiveRecord: 4.3ms | Allocations: 26793)
+
+
