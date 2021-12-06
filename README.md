@@ -48,6 +48,9 @@ Si se desa tener algunos datos cargados se dbera correr el siguiente comando
 > $ rails db:seed
 > ```
 
+Admin: admin@gmail.com password:123123
+Assistant: assistant@gmail.com password:123123
+Watcher: watcher@gmail.com password:123123
 
 ## Comentarios
 Primera entrega:
