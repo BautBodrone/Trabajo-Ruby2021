@@ -52,4 +52,6 @@ gem 'devise', '~> 4.8'
 
 gem 'cancancan'
 
+gem 'kaminari'
+
 

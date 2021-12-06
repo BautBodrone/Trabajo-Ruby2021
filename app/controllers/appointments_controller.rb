@@ -4,15 +4,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments or /appointments.json
   def index
-    if params[:sort] == "name"
-      @appointments = Appointment.order(params[:sort])
-    elsif params[:sort] == "date"
-      @appointments = Appointment.all.sort_by{|appointment| appointment.date}
-    elsif params[:sort] == "professional"
-      @appointments = Appointment.all.sort_by{|appointment| appointment.professional.name}
-    else
-      @appointments = Appointment.all
-    end
+    @appointments = Appointment.page params[:page]
   end
 
   # GET /appointments/1 or /appointments/1.json
