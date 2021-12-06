@@ -4,7 +4,8 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments or /appointments.json
   def index
-    @appointments = Appointment.page params[:page]
+    aux = Appointment.where('date >= ?', Date.today)
+    @appointments = Appointment.where('date >= ?', Date.today).page params[:page]
   end
 
   # GET /appointments/1 or /appointments/1.json
@@ -14,8 +15,6 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
-    # @professional = Professional.new
-    # @professional = Professional.pluck(:name, :id)
   end
 
   # GET /appointments/1/edit
@@ -25,7 +24,6 @@ class AppointmentsController < ApplicationController
   # POST /appointments or /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to @appointment, notice: "Appointment was successfully created." }

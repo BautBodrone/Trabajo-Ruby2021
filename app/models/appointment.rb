@@ -1,5 +1,5 @@
 class Appointment < ApplicationRecord
-  paginates_per 5
+  paginates_per 10
   validates :name, presence: true
   validates :name, format: {
     with: /\A[a-zA-Z]+\z/,
@@ -14,5 +14,6 @@ class Appointment < ApplicationRecord
   validates :phone,
            numericality: { only_integer: true }
   validates :date, presence: true
+  validates :date, uniqueness: { scope: :professional }
   belongs_to :professional
 end

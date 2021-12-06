@@ -1,32 +1,28 @@
-<p>
-  <strong>Name:</strong>
-  <%= @appointment.name %>
-</p>
+<br>
+<div class="card">
+  <div class="card-header">
+    <h1><%= @appointment.name %> <%= @appointment.surname %></h1>
+  </div>
+  <div class="card-body">
+    <strong>Phone:</strong>
+    <%= @appointment.phone %>
 
-<p>
-  <strong>Surname:</strong>
-  <%= @appointment.surname %>
-</p>
+    <br>
+    <strong>Date:</strong>
+    <%= @appointment.date %>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @appointment.phone %>
-</p>
+    <br>
+    <strong>Professional:</strong>
+    <%= @appointment.professional.name %>
 
-<p>
-  <strong>Date:</strong>
-  <%= @appointment.date %>
-</p>
+    <hr class="my-4">
+      <strong>Notes:</strong>
+      <%= @appointment.notes %>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @appointment.notes %>
-</p>
-
-<p>
-  <strong>Professional:</strong>
-  <%= @appointment.professional_id %>
-</p>
-
-<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
-<%= link_to 'Back', appointments_path %>
+    <br>
+    <div class="actions">
+      <%= link_to 'Edit', edit_appointment_path(@appointment), class:'btn btn-secondary' %>
+      <%= link_to 'Appointments', appointments_path, class:"btn btn-dark" %>
+    </div>
+  </div>
+</div>

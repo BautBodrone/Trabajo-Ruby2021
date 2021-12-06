@@ -18,26 +18,24 @@
 
   <tbody>
     <% @appointments.each do |appointment| %>
-      <% if appointment.date.to_date >= Date.today %>
-        <tr>
-          <td><%= appointment.name %></td>
-          <td><%= appointment.surname %></td>
-          <td><%= appointment.phone %></td>
-          <td><%= appointment.date %></td>
-          <td><%= can? :read, @appointments %></td>
-          <td><%= Professional.find(appointment.professional_id).name %></td>
-          <% if can? :read, @appointments %>
-            <td><%= link_to 'Show', appointment, class:"btn bi-eye-fill" %></td>
-          <% end %>
-          <% if can? :edit, @appointments %>
-            <td><%= link_to 'Edit', edit_appointment_path(appointment),class:"btn bi-pencil-fill" %></td>
-          <% end %>
-          <% if can? :destroy, @appointments %>
-            <td><%= link_to 'Destroy', appointment, method: :delete,class:"btn bi-trash-fill",
-                            data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
-        </tr>
-      <% end %>
+      <tr>
+        <td><%= appointment.name %></td>
+        <td><%= appointment.surname %></td>
+        <td><%= appointment.phone %></td>
+        <td><%= appointment.date %></td>
+        <td><%= can? :read, @appointments %></td>
+        <td><%= Professional.find(appointment.professional_id).name %></td>
+        <% if can? :read, @appointments %>
+          <td><%= link_to 'Show', appointment, class:"btn bi-eye-fill" %></td>
+        <% end %>
+        <% if can? :edit, @appointments %>
+          <td><%= link_to 'Edit', edit_appointment_path(appointment),class:"btn bi-pencil-fill" %></td>
+        <% end %>
+        <% if can? :destroy, @appointments %>
+          <td><%= link_to 'Destroy', appointment, method: :delete,class:"btn bi-trash-fill",
+                          data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
     <% end %>
   </tbody>
 </table>

@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   resources :appointments
   resources :users
   resources :professionals
-  get 'professionals/month/:id', to: 'professionals#month'
+  #get 'professionals/month/:id', to: 'professionals#month'
+  resources :professionals do
+    member do
+      get 'month'
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
