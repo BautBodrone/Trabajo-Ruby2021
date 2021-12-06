@@ -4,7 +4,6 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments or /appointments.json
   def index
-    aux = Appointment.where('date >= ?', Date.today)
     @appointments = Appointment.where('date >= ?', Date.today).page params[:page]
   end
 
