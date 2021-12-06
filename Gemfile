@@ -50,8 +50,8 @@ gem 'simple_form' , '~> 5.1.0'
 #Gem for LogIN
 gem 'devise', '~> 4.8'
 
-gem 'cancancan'
+#Gem for managing roles
+gem 'cancancan', '~> 3.3.0'
 
-gem 'kaminari'
-
-
+#Gem for pagination
+gem 'kaminari', '~> 1.2.1'
