@@ -32,6 +32,23 @@ $ bundle install
 > $ gem install bundler
 > ```
 
+### Primer inicio
+
+En el primer inicio se dera correr el siguinte comando para tener una base de datos
+
+>
+> ```bash
+> $ rails db:migrate
+> ```
+
+Si se desa tener algunos datos cargados se dbera correr el siguiente comando
+
+>
+> ```bash
+> $ rails db:seed
+> ```
+
+
 ## Comentarios
 Primera entrega:
   * El codigo esta escrito en ingles el codigo ya que los argumentos estan todos en ingles
