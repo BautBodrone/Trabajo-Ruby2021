@@ -1,24 +1,44 @@
-# README
+# Polycon
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Uso de `polycon`
 
-Things you may want to cover:
+Para ejecutar es requerido rals 6 (6.1.4.1 se utilizo en el desarrollo) y ruby 3
+Se debe para en la root de la crpeta del programa y ejecutar:
 
-* Ruby version
+```bash
+$ rails s
+```
 
-* System dependencies
+O bien:
 
-* Configuration
+```bash
+$ rails server
+```
+Para poder ejecutar el servidor de rails y usar la applicacion.
 
-* Database creation
+### Instalación de dependencias
 
-* Database initialization
+Este proyecto utiliza Bundler para manejar sus dependencias
 
-* How to run the test suite
+```bash
+$ bundle install
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+> Nota: Bundler debería estar disponible en tu instalación de Ruby, pero si por algún
+> motivo al intentar ejecutar el comando `bundle` obtenés un error indicando que no se
+> encuentra el comando, podés instalarlo mediante el siguiente comando:
+>
+> ```bash
+> $ gem install bundler
+> ```
 
-* Deployment instructions
+## Comentarios
+Primera entrega:
+  * El codigo esta escrito en ingles el codigo ya que los argumentos estan todos en ingles
+  * La entrada de la fecha no me gusta como esta ahora ya que no funciona correctamente. No encontre forma de obligar al usuario a escribir hora. Cuando se agregue una UI se va a poder arreglar ese error
+  * No hice ningun utils ya que para los que queria como por ejemplo el checkeo de directorio ya era una linea de codigo
+  * El edit es el mas flojo de todos ya que utiliza un case para checkear si es la opcion correcta, intente de busca un 'in' como hay en python pero no encontre asi que termine optando por el case. Y el abrir el archivo para guardar no es lo mas optimo ya que abre y guarda dependiendo de la cantidad de opciones. Una solucion que se me ocurrio es guardandolo en formato json pero no se podia ya que el archivo pedia que sea .paf
 
-* ...
+Tercera entrega:
+  * El programa esta completamente en ingles porque me parecio mas consistete con la forma en la ruby pide que escribamos los nombres de las variables
+  * El archivos pasos_seguidos.doc es una pequeña parte de los camando que fui utilizando mientras que empezaba a leer sobre ruby
