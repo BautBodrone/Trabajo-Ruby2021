@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
     appointments_path
   end
 
-  # rescue_from CanCan::AccessDenied do |exception|
-  #   respond_to do |format|
-  #     format.json { head :forbidden }
-  #     format.html { redirect_to root_path, notice: exception.message }
-  #   end
-  # end
+  rescue_from CanCan::AccessDenied do |exception|
+    respond_to do |format|
+      format.json { head :forbidden }
+      format.html { redirect_to root_path, notice: exception.message }
+    end
+  end
 
 end
