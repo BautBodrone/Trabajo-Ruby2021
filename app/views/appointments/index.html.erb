@@ -40,5 +40,6 @@
 </table>
 <%= paginate @appointments %>
 <br>
-
 <%= link_to 'New Appointment', new_appointment_path, class:"btn btn-success" %>
+<%= link_to 'Download Week', appointments_path(format:'json'),class:"btn btn-secondary" %>
+<%= link_to 'Download Month', appointments_path(format:'pdf'),class:"btn btn-secondary" %>

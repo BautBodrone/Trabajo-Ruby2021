@@ -1,4 +1,7 @@
 class ProfessionalsController < ApplicationController
+
+  include RenderPdf
+
   before_action :set_professional, only: %i[ show edit update destroy ]
   load_and_authorize_resource
 
@@ -9,6 +12,12 @@ class ProfessionalsController < ApplicationController
 
   # GET /professionals/1 or /professionals/1.json
   def show
+    week = render_to_string "professionals/week_download.html.erb"
+
+    respond_to do |format|
+      format.html
+      format.pdf {  render_pdf week, filename: "week#{@professional.name}.pdf" }
+    end
   end
 
   # GET /professionals/new
@@ -18,6 +27,12 @@ class ProfessionalsController < ApplicationController
 
   # GET /professionals/month
   def month
+    month = render_to_string "professionals/month_download.html.erb"
+
+    respond_to do |format|
+      format.html
+      format.pdf {  render_pdf month, filename: "month#{@professional.name}.pdf" }
+    end
   end
 
   # GET /professionals/1/edit

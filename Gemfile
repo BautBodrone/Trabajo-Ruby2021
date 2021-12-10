@@ -55,3 +55,5 @@ gem 'cancancan', '~> 3.3.0'
 
 #Gem for pagination
 gem 'kaminari', '~> 1.2.1'
+
+gem 'grover'

@@ -12,5 +12,12 @@ Rails.application.routes.draw do
       get 'month'
     end
   end
+
+  resources :appointments do
+    member do
+      get 'month', to: 'appointments#month'
+      get 'week', to: 'appointments#week'
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

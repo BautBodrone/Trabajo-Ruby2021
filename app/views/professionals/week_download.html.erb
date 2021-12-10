@@ -19,15 +19,12 @@
           <div class="col">
             Time
           </div>
-          <div class="col">
-            Show
-          </div>
         </div>
       </div>
     </div>
   </div>
   <hr class="my-4">
-  <% for i in 0..29 do %>
+  <% for i in 0..6 do %>
     <div class="row">
       <div class="col">
         <%= Date.today + i.days %>
@@ -45,11 +42,6 @@
               <div class="col">
                 <%=appointment.date.strftime("%I:%M%p")%>
               </div>
-              <div class="col">
-                <% if can? :read, @appointments %>
-                  <td><%= link_to 'Show', appointment, class:"btn bi-eye-fill" %></td>
-                <% end %>
-              </div>
             </div>
           <% end %>
         <% end %>
@@ -58,6 +50,3 @@
     <hr class="my-4">
   <% end %>
 </div>
-<%= link_to 'Download Month', month_professional_path(@professional,format:'pdf'),class:"btn btn-secondary" %>
-<%= link_to 'Week', professional_path(@professional),class:"btn btn-secondary" %>
-<%= link_to 'Professionals', professionals_path, class:"btn btn-dark" %>

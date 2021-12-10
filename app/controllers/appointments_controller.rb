@@ -1,10 +1,23 @@
 class AppointmentsController < ApplicationController
+  include RenderPdf
+
   before_action :set_appointment, only: %i[ show edit update destroy ]
   load_and_authorize_resource
 
   # GET /appointments or /appointments.json
   def index
     @appointments = Appointment.where('date >= ?', Date.today).page params[:page]
+    respond_to do |format|
+      format.html
+      format.json{
+        week = render_to_string "appointments/week_download.html.erb"
+        render_pdf week, filename: "weekPolycon.pdf"
+      }
+      format.pdf{
+        month = render_to_string "appointments/month_download.html.erb"
+        render_pdf month, filename: "monthPolycon.pdf"
+      }
+    end
   end
 
   # GET /appointments/1 or /appointments/1.json
@@ -66,6 +79,26 @@ class AppointmentsController < ApplicationController
     def appointment_params
       params.require(:appointment).permit(:name, :surname, :phone, :date, :notes, :professional_id)
     end
+
+  # GET /professionals/month
+  def week
+    week = render_to_string "appointments/week_download.html.erb"
+
+    respond_to do |format|
+      format.html
+      format.pdf {  render_pdf week, filename: "weekPolycon.pdf" }
+    end
+  end
+
+  # GET /professionals/month
+  def month
+    month = render_to_string "appointments/month_download.html.erb"
+
+    respond_to do |format|
+      format.html
+      format.pdf {  render_pdf month, filename: "monthPolycon.pdf" }
+    end
+  end
 
   before_action :authenticate_user!
 end

@@ -59,5 +59,6 @@
     <hr class="my-4">
   <% end %>
 </div>
+  <%= link_to 'Download Week', professional_path(format:'pdf'),class:"btn btn-secondary" %>
   <%= link_to 'Month', month_professional_path(@professional),class:"btn btn-secondary" %>
   <%= link_to 'Porfessionals', professionals_path, class:"btn btn-dark" %>
