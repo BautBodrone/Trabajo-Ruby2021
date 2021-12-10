@@ -32,6 +32,12 @@ $ bundle install
 > $ gem install bundler
 > ```
 
+Se debe installar puppeteer para que pode bajar los archivos
+
+>
+>npm install puppeteer
+>
+
 ### Primer inicio
 
 En el primer inicio se dera correr el siguinte comando para tener una base de datos
@@ -52,6 +58,8 @@ Admin: admin@gmail.com password:123123
 Assistant: assistant@gmail.com password:123123
 Watcher: watcher@gmail.com password:123123
 
+
+
 ## Comentarios
 Primera entrega:
   * El codigo esta escrito en ingles el codigo ya que los argumentos estan todos en ingles
@@ -62,3 +70,4 @@ Primera entrega:
 Tercera entrega:
   * El programa esta completamente en ingles porque me parecio mas consistete con la forma en la ruby pide que escribamos los nombres de las variables
   * El archivos pasos_seguidos.doc es una pequeña parte de los camando que fui utilizando mientras que empezaba a leer sobre ruby
+  * Se utilizo puppeteer ya que las otras opciones para transformar el archivo (wicked_pdf y pdfkit) requerian una libreria que no funciona correctamente en windows
