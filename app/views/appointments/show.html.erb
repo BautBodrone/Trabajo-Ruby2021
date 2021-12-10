@@ -21,7 +21,9 @@
 
     <br>
     <div class="actions">
-      <%= link_to 'Edit', edit_appointment_path(@appointment), class:'btn btn-secondary' %>
+      <% if can? :edit, @professionals %>
+        <%= link_to 'Edit', edit_appointment_path(@appointment), class:'btn btn-secondary' %>
+      <% end %>
       <%= link_to 'Appointments', appointments_path, class:"btn btn-dark" %>
     </div>
   </div>
